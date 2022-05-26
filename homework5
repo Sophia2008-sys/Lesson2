@@ -1,0 +1,21 @@
+colorama - це бібліотека для роботи з кольорами.
+Програми повинні ініціалізувати Colorama за допомогою:
+from colorama  import  init
+init ()
+Міжплатформний друк кольорового тексту може бути виконаний за допомогою постійної скорочення Colorama для escape-послідовностей ANSI:
+
+з  colorama  import  Fore ,  Back ,  Style
+print ( Fore . RED  +  'деякий червоний текст' )
+print ( Back . GREEN  +  'і з зеленим фоном' )
+print ( Style . DIM  +  'and in dim text' )
+print ( Style RESET_ALL ) print ( 'повернутися до нормального стану зараз ' )
+
+Або просто вручну надрукувавши послідовності ANSI з вашого власного коду:
+
+print ( ' \033 [31m'  +  'some red text' )
+print ( ' \033 [39m' )  # і скинути колір за замовчуванням
+
+Доступні константи форматування:
+Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.
+Back: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.
+Style: DIM, NORMAL, BRIGHT, RESET_ALL
